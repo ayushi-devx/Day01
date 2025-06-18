@@ -1,0 +1,68 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+     .d1 {
+        border:2px solid black;
+        padding:20px;
+    }
+   </style>
+</head>
+<body>
+    <input type="range" max="120" min="8" oninput="inputvalues()" id="txt"/>
+    <div class="d1">
+        This is an amazing example of input event using range element
+    </div>
+
+    <script> -->
+        <!-- function inputvalues()
+        {
+            var range = document.querySelector('#txt');
+            var div = document.querySelector('.d1');
+            div.style.fontSize = range.value + "px";
+            console.log(range.value)
+
+        }
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1{
+            border: 2px solid teal;
+            padding: 2px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <input type="range" id="txt" max="100" min="9" oninput="rangeChanger()">
+    <div class="d1">
+        hello everyone, m hu doremon...kaise h aap sab
+    </div>
+    <script>
+        function rangeChanger(){
+            var tt=document.querySelector('#txt');
+            var div=document.querySelector('.d1');
+            div.style.fontSize=tt.value+"px";
+            console.log(tt.value);
+        }
+
+
+
+    </script>
+
+</body>
+</html>
