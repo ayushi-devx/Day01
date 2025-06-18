@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+
+       #root{
+        position: relative;
+       }
+       #container{
+        height:449px;
+        border: 0px solid black;
+        width: 400px;
+        border:3px solid rgba(10, 10, 10, 0.901);
+        position: absolute;
+        top:100px;
+        left:490px;
+        background-color: rgba(0, 0, 0, 0.853);
+     
+       }
+.box{
+    border:0.5px solid black;
+   width: 17px;
+    border-radius: 50px;
+    box-shadow:0px 0px 36px black;
+    background-color: black;
+    text-align: center;
+}
+input{
+    color:white;
+    height: 82px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    width: 396px;
+    background-color: black;
+    text-align:end;
+}
+table{
+    width: 400px;
+    height:290px
+}
+</style>
+</head>
+<body id="root" >
+  <div id="container">
+    <div >
+        <h3 style="color: white; margin-left: 20px; ;" >calc</h3>
+  
+<div >
+    <input  >
+    <!-- upeer part -->
+</div>
+<table  style="background-color: rgb(49, 48, 48);">
+    <tr id="tr1" style="color: blue; ">
+        <td  id="ac" class="box" >AC</td>
+        <td  class="box">C</td>
+        <td  id="% " class="box">%</td>
+        <td  id="/" class="box">/</td>
+    </tr>
+    <tr style="color: white;" >
+        <td  id="7" class="box">7</td>
+        <td id="8" class="box">8</td>
+        <td  id="9" class="box">9</td>
+        <td id="*" class="box">*</td>
+    </tr>
+   <tr  style="color: white;" >
+    <td id="4" class="box">4</td>
+    <td id="5" class="box">5</td>
+    <td id="6" class="box">6</td>
+    <td  id="-"  class="box">-</td>
+   </tr>
+   <tr   style="color: white;" >
+    <td  id="1" class="box">1</td>
+    <td  id="2" class="box">2</td>
+    <td id="3" class="box">3</td>
+    <td id="plus" onclick="add()" class="box">+</td>
+
+  
+   </tr>
+   <tr>
+    <td  style="color:white; background-color: black; text-align: center;  border-radius: 50px;"  colspan="2">
+0
+   </td>
+   <td  id="ans" style="color: brown; background-color: black; text-align: center;  border-radius: 50px;" colspan="1">ans</td>
+   <td  id="equal" style="color: brown; background-color: black; text-align: center;  border-radius: 50px;" colspan="1">=</td>
+</tr>
+
+</table>
+<div>
+    <!-- lowr part -->
+</div>
+  </div>
+<script>
+var table=document.querySelector("table");
+var tde=table.querySelectorAll('td');
+tde.forEach((td)=>{
+
+    td.addEventListener('click',(event)=>{
+        // console.log(td.textContent);
+        var ans1=document.getElementById("ans");
+
+        var equal=document.getElementById("equal");
+        var input=document.getElementById("input");
+        console.log(input.value);
+    // input.textContent=event.target.id;
+    // console.log(event.target.id);
+        
+       
+     
+        
+
+        // function add(td){
+        //     result=td.value+input.value;
+        //     ans.textContent=result;
+        //     console.log(ans);
+        //     // result=td.value+input.value;
+        //     // ans.textContent=result;
+
+        // }
+        // else if(td.value=="-"){
+        //     ans.textContent=td.value-input.value;
+
+
+        // }
+        // else if(td.value=="*"){
+        //     ans.textContent=td.value*input.value;
+
+        // }
+        // else if(td.value=="/"){
+        // ans.textContent=td.value/input.value;
+
+
+        // }
+        // else if(td.value=="%"){
+        // ans.textContent=td.value%input.value;
+
+
+        // }
+        // else if(td.value=="AC"){
+        //     input.innerHTML="none";
+
+        // }
+        // else if(td.value="C"){
+        //     input.innerHTML="none";
+
+
+        // }
+    })
+})
+
+
+
+// function add(){
+//     // console.log("hello");
+//             var input=document.querySelector("input");
+//             var ans=document.getElementById("ans");
+//             input1 = parseInt(input.value);
+   
+
+
+
+        //  ans.textContent= input.value;
+        //  console.log(ans.textContent);
+           
+
+    
+   
+
+
+  
+//     var table=document.querySelector("table");
+// var tde=table.querySelectorAll('td');
+//     var input=document.querySelector("input");
+//         input.value=td.textContent;
+//         var result=document.getElementById("ans");
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
