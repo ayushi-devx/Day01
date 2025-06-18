@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="border:2px solid black">
+    <div>
+        <form>
+        <p>1. Who is known as the "Father of the Nation" in India?</p>
+        <label >
+        <input type="radio" name="q1" value="Jawaharlal Nehru">Jawaharlal Nehru
+        </label>
+        <input type="radio" name="q1" value="B. R. Ambedkar">B. R. Ambedkar
+        <input type="radio" name="q1" value="Subhas Chandra Bose">Subhas Chandra Bose
+        <input type="radio" name="q1" value="Mahatma Gandhi">Mahatma Gandhi
+        <br>
+        <p>2. Which is the largest planet in our solar system?</p>
+        <input type="radio" name="q2" value="earth">earth
+        <input type="radio" name="q2" value="saturn">saturn
+        <input type="radio" name="q2" value="jupiter">jupiter
+        <input type="radio" name="q2" value="neptune">neptune
+        <br>
+        <p>3. Who wrote the national anthem of India?</p>
+        <input type="radio" name="q3" value="Rabindranath Tagore">Rabindranath Tagore
+        <input type="radio" name="q3" value="Bankim Chandra Chattopadhyay">Bankim Chandra Chattopadhyay
+        <input type="radio" name="q3" value="Sarojini Naidu">Sarojini Naidu
+        <input type="radio" name="q3" value="Subramania Bharati">Subramania Bharati
+        <p>4. What is the capital of Australia?</p>
+        <input type="radio" name="q4" value="Sydney">Sydney
+        <input type="radio" name="q4" value="Canberra">Canberra
+        <input type="radio" name="q4" value="Melbourne">Melbourne
+        <input type="radio" name="q4" value="Perth">Perth
+        <p>5. Who is the current Secretary-General of the United Nations (as of 2024)?</p>
+        <input type="radio" name="q5" value="Ban Ki-moon">Ban Ki-moon
+        <input type="radio" name="q5" value="António Guterres">António Guterres
+        <input type="radio" name="q5" value="Kofi Annan">Kofi Annan
+        <input type="radio" name="q5" value="Ursula von der Leyen">Ursula von der Leyen
+         <button type="submit">submit</button>
+        </form>
+        
+    </div>
+    <div id="out">
+
+    </div>
+    <script>
+
+
+        var original={
+            q1:"Mahatma Gandhi",
+            q2:"jupiter",
+            q3:"Rabindranath Tagore",
+            q4:"Canberra",
+            q5:"António Guterres"
+        }
+
+        
+        var form=document.querySelector('form');
+        
+        form.addEventListener('submit',(event)=>{
+            event.preventDefault();
+             var data=new FormData(form);
+        var result=0;
+        for(var [key,value] of data.entries()){
+            if(value===original[key])
+            result++;
+        }
+         document.getElementById("out").innerText=`${result}`;
+         })
+       
+
+
+       
+       
+
+
+
+    </script>
+</body>
+</html>
