@@ -1,0 +1,208 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+    <style>
+body{
+    height:100vh;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    display: flex;
+
+
+}
+.circle{
+border-radius: 50%;
+    width:50px;
+    height: 50px;
+    display:flex;
+    color:white;
+    background-color: blue;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    animation: grow 5s forwards;
+
+
+
+
+}
+@keyframes grow{
+    0%{
+        transform:scale(1);
+        opacity:1;
+        font-size:10px;
+    }
+    100%{
+        transform: scale(3);
+        opacity:0;
+        font-size: 40px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <script>
+
+ document.body.addEventListener('click',(event)=>{
+    const circle= document.createElement('div');
+ circle.className='circle';
+ 
+
+ const x=event.clientX;
+ const y=event.clientY;
+ circle.style.left=`${x}px`;
+ circle.style.top=`${y}px`;
+
+ const color=["red","pink","green","blue","purple","wheat","yellow","grey","orange"];
+
+  circle.style.backgroundColor=color[ Math.floor(Math.random()*color.length)];
+
+  const msg=["hello","hii","whats up","byee","see ya"];
+  circle.textContent=msg[Math.floor(Math.random()*msg.length)];
+
+
+
+ document.body.appendChild(circle);
+ 
+
+ });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html> 
+
+
+
+    
+
+
+
+
+
+
+
+
+
+       <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circle Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+} -->
+
+<!-- .circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  opacity: 1;
+  overflow: hidden; 
+  animation: grow 5s forwards;
+  background-color: blue;
+} -->
+
+<!-- @keyframes grow {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    font-size: 10px; 
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+    font-size: 40px; 
+  }
+}
+
+  </style>
+</head>
+<body> -->
+  <!-- <div class="circle">Hi</div> -->
+  <!-- <script >
+    document.body.addEventListener("click", (event)=>{
+  
+  const circle = document.createElement('div');
+  circle.className = 'circle';
+  circle.textContent="Hi";
+  
+  const x = event.clientX;
+  const y = event.clientY;
+
+  circle.style.left = `${x-25}px`
+  circle.style.top= `${y-25}px`
+
+
+  const color = ["red", "blue", "orange", "green","purple", "white","yellow", "wheat"];
+  circle.style.backgroundColor = color[Math.floor(Math.random()*color.length)];
+  document.body.appendChild(circle);
+
+  setTimeout(()=>{
+    circle.remove(); -->
+  <!-- } ,5000)
+})
+  </script>
+</body>
+</html>
+ -->
