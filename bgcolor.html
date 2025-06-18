@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #root{
+          
+            position: absolute;
+            display:flex;
+            justify-content: center;
+           text-align: center;
+           align-items: center;
+           top:300px;
+           left:470px;
+          
+
+           
+        }
+        #red{
+            height: 50px;
+            width: 100px;
+            background-color: red;
+        }
+        #green{
+             height: 50px;
+            width: 100px;
+            background-color: green;
+        }
+        #purple{
+             height: 50px;
+            width: 100px;
+            background-color: purple;
+        }
+        #orange{
+             height: 50px;
+            width: 100px;
+            background-color: orange;
+        }
+        #yellow{
+             height: 50px;
+            width: 100px;
+            background-color: yellow;
+        }
+    </style>
+
+</head>
+<body>
+   <div id="root">
+    <h1>background-color changer</h1>
+    <button id="red">red</button>
+    <button id="green">green</button>
+    <button id="purple">purple</button>
+    <button id="orange">orange</button>
+    <button id="yellow"> yellow</button>
+    
+
+
+   </div>
+
+<script>
+
+
+const body=document.body;
+const root=document.getElementById('root');
+// event bubbling
+const button=document.querySelectorAll("button");
+
+root.addEventListener('click',(event)=>{
+
+   if(event.target.tagName=='BUTTON'){
+    document.body.style.backgroundColor=event.target.id;
+   }
+   
+
+})
+
+
+
+
+
+// const body=document.body;
+// const button=document.querySelectorAll("button");
+// button.forEach((button)=>{
+//     button.addEventListener('click',()=>{
+       
+//         body.style.backgroundColor=button.id;
+//     })
+// })
+
+
+
+
+
+
+//   const red=  document.getElementById("red");
+//    const green= document.getElementById("green");
+//     const purple= document.getElementById("purple");
+//    const orange= document.getElementById("orange");
+  
+//    const yellow= document.getElementById("yellow");
+
+//    const body=document.body;
+
+//    red.addEventListener('click',()=>{
+//     body.style.backgroundColor="red";
+//    })
+//     green.addEventListener('click',()=>{
+//     body.style.backgroundColor="green";
+//    })
+//    purple.addEventListener('click',()=>{
+//     body.style.backgroundColor="purple";
+//    })
+ 
+    
+//     orange.addEventListener('click',()=>{
+//     body.style.backgroundColor="orange";
+//    })
+   
+//     yellow.addEventListener('click',()=>{
+//     body.style.backgroundColor="yellow";
+//    })
+
+</script>
+</body>
+</html>
